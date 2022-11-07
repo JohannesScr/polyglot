@@ -194,6 +194,8 @@ const encodeSearchParams: (params: URLQueryParams) => URLSearchParams  = (params
                     p.append(key, v as string);
                 }
             }
+        } else {
+            p.delete(key);
         }
     });
     return p;
